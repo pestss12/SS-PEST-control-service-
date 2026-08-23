@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S.S Pest Control Service</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;line-height:1.6;color:#18312b;background:#f7fbf8}
+header{background:#123d32;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}
+.logo{font-size:24px;font-weight:800}.call{background:#f4b942;color:#123d32;padding:10px 18px;border-radius:25px;text-decoration:none;font-weight:bold}
+.hero{padding:90px 7%;background:linear-gradient(120deg,#123d32,#28745d);color:white;text-align:center}
+.hero h1{font-size:46px;margin-bottom:15px}.hero p{font-size:20px;max-width:700px;margin:auto}.btn{display:inline-block;margin-top:25px;background:#f4b942;color:#123d32;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:bold}
+section{padding:60px 7%}.title{text-align:center;font-size:32px;margin-bottom:35px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.card{background:white;padding:25px;border-radius:18px;box-shadow:0 8px 25px #00000010}.card h3{margin:10px 0;color:#17614d}
+.icon{font-size:40px}
+.about{background:#eaf5ef}.contact{background:#123d32;color:white}
+form{max-width:650px;margin:auto;background:white;padding:28px;border-radius:18px;color:#18312b}
+input,textarea,select{width:100%;padding:13px;margin:8px 0 15px;border:1px solid #ccd8d2;border-radius:9px}
+button{border:0;background:#f4b942;color:#123d32;padding:14px 25px;border-radius:25px;font-weight:bold;cursor:pointer;width:100%}
+footer{text-align:center;padding:22px;background:#0c2c25;color:white}
+@media(max-width:600px){.hero h1{font-size:34px}header{padding:15px 4%}.logo{font-size:19px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">S.S Pest Control Service</div>
+<a class="call" href="tel:8625019442">📞 Call Now</a>
+</header>
+
+<section class="hero">
+<h1>Professional Pest Control Service</h1>
+<p>Reliable pest control solutions for homes, shops, offices and commercial spaces.</p>
+<a class="btn" href="#booking">Book a Service</a>
+</section>
+
+<section>
+<h2 class="title">Our Services</h2>
+<div class="grid">
+<div class="card"><div class="icon">🪳</div><h3>Cockroach Control</h3><p>Effective treatment to help keep your property cockroach-free.</p></div>
+<div class="card"><div class="icon">🐜</div><h3>Ant Control</h3><p>Targeted solutions for unwanted ants and crawling insects.</p></div>
+<div class="card"><div class="icon">🦟</div><h3>Mosquito Control</h3><p>Professional treatment for mosquito-prone areas.</p></div>
+<div class="card"><div class="icon">🐀</div><h3>Rodent Control</h3><p>Solutions for rats and mice in residential and commercial areas.</p></div>
+<div class="card"><div class="icon">🪲</div><h3>Termite Control</h3><p>Protection-focused termite treatment for your property.</p></div>
+<div class="card"><div class="icon">🏠</div><h3>Home Pest Control</h3><p>Convenient pest control service for homes and apartments.</p></div>
+</div>
+</section>
+
+<section class="about">
+<h2 class="title">Why Choose S.S Pest Control Service?</h2>
+<div class="grid">
+<div class="card"><h3>Professional Service</h3><p>Careful and systematic pest control service.</p></div>
+<div class="card"><h3>Quick Response</h3><p>Contact us to discuss your pest problem and service requirement.</p></div>
+<div class="card"><h3>Residential & Commercial</h3><p>Service options for homes, offices, shops and other properties.</p></div>
+</div>
+</section>
+
+<section id="booking" class="contact">
+<h2 class="title">Book / Enquire Now</h2>
+<form onsubmit="sendWhatsApp(event)">
+<label>Name</label>
+<input id="name" required placeholder="Your name">
+<label>Mobile Number</label>
+<input id="phone" required placeholder="Your mobile number">
+<label>Service Required</label>
+<select id="service">
+<option>Cockroach Control</option><option>Termite Control</option><option>Mosquito Control</option>
+<option>Rodent Control</option><option>Ant Control</option><option>Home Pest Control</option><option>Other</option>
+</select>
+<label>Message</label>
+<textarea id="message" rows="4" placeholder="Tell us about your requirement"></textarea>
+<button type="submit">Send Enquiry on WhatsApp</button>
+</form>
+</section>
+
+<footer>
+<p><strong>S.S Pest Control Service</strong></p>
+<p>📞 8625019442</p>
+<p>© 2026 S.S Pest Control Service. All Rights Reserved.</p>
+</footer>
+
+<script>
+function sendWhatsApp(e){
+ e.preventDefault();
+ const n=document.getElementById('name').value;
+ const p=document.getElementById('phone').value;
+ const s=document.getElementById('service').value;
+ const m=document.getElementById('message').value;
+ const text=`Hello S.S Pest Control Service, I want to book a service.%0AName: ${encodeURIComponent(n)}%0AMobile: ${encodeURIComponent(p)}%0AService: ${encodeURIComponent(s)}%0AMessage: ${encodeURIComponent(m)}`;
+ window.open('https://wa.me/918625019442?text='+text,'_blank');
+}
+</script>
+</body>
+</html>
